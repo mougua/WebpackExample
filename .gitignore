@@ -112,3 +112,5 @@ fabric.properties
 
 dist/
 output/
+
+.idea/
