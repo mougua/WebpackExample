@@ -1,0 +1,263 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: monospace, serif, sans-serif, "微軟正黑體";
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  background-image: linear-gradient(120deg, rgba(168, 242, 255, .6) 0%, rgba(86, 89, 202, .8) 100%);
+}
+
+.container {
+  width: 80%;
+  height: 90%;
+  margin: 20px auto;
+  padding: 0;
+  border-radius: 10px;
+  background-color: rgba(217, 237, 255, .6);
+  position: absolute;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.header {
+  width: 100%;
+  padding: 1% 1.5%;
+  background-color: #0667A8;
+  text-align: center;
+}
+
+.header img {
+  width: 45px;
+  height: 45px;
+  margin: 5px;
+  display: inline-block;
+  background-color: #FEEEE0;
+  border-radius: 50%;
+  border: 2px solid #FDE2CA;
+  vertical-align: middle;
+}
+
+.header span {
+  color: #EDF9FF;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.remind {
+  width: 96%;
+  min-height: 89px;
+  margin: 2% 2% 0;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: .5s;
+}
+
+.remind.minChange {
+  min-height: 34px;
+}
+
+.remind .title {
+  padding: 8px 10px;
+  color: #FFF;
+  font-size: 14px;
+  letter-spacing: 3px;
+  background-color: #3FA4E7;
+}
+
+.remind .title i {
+  padding: 0 5px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.remind .content {
+  padding: 5px 10px 10px;
+  background-color: rgba(255, 255, 255, .9);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.remind .content i {
+  color: #F6A7A8;
+}
+
+.dialogue {
+  width: 96%;
+  margin: 2% 2% 0;
+  padding: 10px 5px;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 5px;
+  flex-grow: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.dialogue ul li.name {
+  width: 60px;
+  height: 60px;
+  margin: 5px;
+  display: inline-block;
+  text-align: center;
+  position: relative;
+}
+
+.dialogue ul li.name img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #FFF;
+  vertical-align: middle;
+}
+
+.dialogue ul li span.time {
+  color: #6E7A89;
+  font-size: 12px;
+  letter-spacing: -1px;
+  position: absolute;
+  left: 8px;
+  bottom: 0;
+}
+
+.dialogue ul li.chat {
+  max-width: 60%;
+  padding: 10px 15px;
+  color: #2F343B;
+  font-size: 14px;
+  border-radius: 5px;
+  display: inline-block;
+  word-break: break-all;
+}
+
+.dialogue .service ul li.name img {
+  background-color: #FDE2CA;
+}
+
+.dialogue .service ul li.chat {
+  background-color: #FEEDDE;
+}
+
+.dialogue .customer {
+  text-align: right;
+}
+
+.dialogue .customer ul li.name img {
+  background-color: #91DBFB;
+}
+
+.dialogue .customer ul li.chat {
+  background-color: #CCEEFD;
+}
+
+.dialogue ul li.leaveMsg {
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+  line-height: 24px;
+}
+
+.messages_area {
+  width: 100%;
+  margin: 1% 2%;
+}
+
+.messages_area .col-md-1 {
+  padding: 0;
+}
+
+.btnTop {
+  display: inline-block;
+}
+
+.btnTop i {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #FFF;
+  color: #64BCE8;
+  line-height: 30px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.messages_area .pull-right {
+  padding: 0;
+}
+
+.btn {
+  margin-top: 8px;
+  padding: 5px 18px;
+  color: #FFF;
+  font-size: 12px;
+  border: 0px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn.beginBtn {
+  padding: 5px 6px;
+  display: none;
+}
+
+.btn-danger {
+  background-color: rgba(225, 38, 66, .8);
+}
+
+.btn-danger:hover {
+  background-color: rgba(225, 38, 66, 1);
+}
+
+.btn-info {
+  background-color: rgba(63, 164, 231, .8);
+}
+
+.btn-info:hover {
+  background-color: rgba(63, 164, 231, 1);
+}
+
+.messages {
+  width: 96%;
+  height: 60px;
+  margin-top: 1.5%;
+  padding: 2%;
+  display: inline-block;
+  background-color: rgba(255, 255, 255, .9);
+  border-radius: 5px;
+  border: 0px;
+  resize: none;
+}
+
+/* -----Scrollbar Setting----- */
+.dialogue::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.dialogue::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: rgba(52, 52, 54, .1);
+}
+
+.dialogue::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: rgba(52, 52, 54, .5);
+}
+
+.dialogue::-webkit-scrollbar-thumb:hover,
+.dialogue::-webkit-scrollbar-thumb:active {
+  background: rgba(52, 52, 54, .6);
+}
