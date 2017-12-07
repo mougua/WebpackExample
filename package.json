@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "pack": "webpack"
+  },
+  "devDependencies": {
+    "webpack": "^3.8.1"
+  },
   "dependencies": {
     "jquery": "^3.2.1"
   }
