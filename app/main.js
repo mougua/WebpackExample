@@ -9,7 +9,7 @@ const client = XMPP.createClient({
   transport: 'websocket',
   wsURL: 'wss://localhost:7443/ws/'
 })
-
+client.use(require('./plugins/workgroup'))
 client.on('session:started', () => {
   client.getRoster()
   client.sendPresence()
@@ -23,22 +23,7 @@ client.on('chat', function (msg) {
 })
 
 $('#on').click(function () {
-  client.sendPresence({
-    from: client.jid,
-    to: 'demo@workgroup.localhost',
-    tt: 'tt',
-    'agent-status': {
-      'max-chats': 4
-    }
-  })
-  // setTimeout(function () {
-  //   client.sendPresence({
-  //     to: 'demo@workgroup.localhost',
-  //     status: '在线',
-  //     priority: 1
-  //   })
-  //   console.log('on')
-  // }, 2000)
+  client.sendWorkgroupPresence('demo@workgroup.localhost', 4)
 })
 
 client.on('raw:incoming', (xml) => {
