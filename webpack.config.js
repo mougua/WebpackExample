@@ -9,6 +9,12 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  devServer: {
+    contentBase: './dist', // 本地服务器所加载的页面所在的目录
+    historyApiFallback: true, // 不跳转
+    inline: true// 实时刷新
+  },
+
   plugins: [
     new HtmlWebPackPlugin({
       template: path.join(__dirname, 'app/index.html')

@@ -1,10 +1,13 @@
 {
   "scripts": {
-    "pack": "webpack"
+    "clean": "rm -rf dist",
+    "pack": "webpack",
+    "server": "webpack-dev-server --open"
   },
   "devDependencies": {
     "webpack": "^3.8.1",
-    "html-webpack-plugin": "^2.30.1"
+    "html-webpack-plugin": "^2.30.1",
+    "webpack-dev-server": "^2.9.4"
   },
   "dependencies": {
     "jquery": "^3.2.1"
