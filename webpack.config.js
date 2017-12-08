@@ -9,6 +9,15 @@ module.exports = {
     filename: 'bundle.js'
   },
 
+  module: {
+    rules: [
+      {
+        test: /\.css/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
+
   devServer: {
     contentBase: './dist', // 本地服务器所加载的页面所在的目录
     historyApiFallback: true, // 不跳转
